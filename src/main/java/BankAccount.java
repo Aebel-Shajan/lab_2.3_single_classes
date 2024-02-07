@@ -5,7 +5,7 @@ public class BankAccount {
     private String lastName;
     private String dateOfBirth;
     private int accountNumber;
-    private float balance; // automatically if zero
+    private float balance; // automatically zero
     private String accountType;
 
     public BankAccount(String firstName, String lastName, String dateOfBirth, int accountNumber, String accountType) {
