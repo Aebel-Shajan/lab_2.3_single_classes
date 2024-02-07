@@ -157,5 +157,15 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    public void canWithdrawOnlyPositiveNumbers() {
+        // ARRANGE
+        bankAccount.setBalance(100.00f);
+        float expected = 100.00f;
+        // ACT
+        bankAccount.withdraw(-50.00f);
+        float actual = bankAccount.getBalance();
+        // ASSERT
+        assertThat(actual).isEqualTo(expected);
+    }
 
 }
