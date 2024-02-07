@@ -64,4 +64,9 @@ public class BankAccount {
         }
     }
 
+    public void payInterest(float interestRate) { // interest rate is number greater than one
+        if (interestRate > 1.0f) {
+            this.balance *= interestRate;
+        }
+    }
 }

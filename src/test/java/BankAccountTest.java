@@ -157,6 +157,7 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
     public void canWithdrawOnlyPositiveNumbers() {
         // ARRANGE
         bankAccount.setBalance(100.00f);
@@ -168,6 +169,7 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
     public void canPayInterest() {
         // ARRANGE
         bankAccount.setBalance(100.00f);
