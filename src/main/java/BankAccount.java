@@ -53,4 +53,10 @@ public class BankAccount {
             this.balance += amount;
         }
     }
+
+    public void withdraw(float amount) {
+        if (amount > 0.0f && this.balance - amount >= 0.0f) {
+            this.balance -= amount;
+        }
+    }
 }
