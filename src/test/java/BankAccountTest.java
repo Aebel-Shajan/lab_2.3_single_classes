@@ -179,6 +179,6 @@ public class BankAccountTest {
         bankAccount.payInterest();
         float actual = bankAccount.getBalance();
         // ASSERT
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual).isEqualTo(expected); // tests were actually useful here 😱
     }
 }

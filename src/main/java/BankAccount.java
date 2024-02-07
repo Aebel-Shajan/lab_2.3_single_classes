@@ -58,6 +58,7 @@ public class BankAccount {
 
     public void setBalance(float balance) {
         this.balance = balance;
+        this.balance = Math.round(this.balance * 100.0f) / 100.0f;
     }
 
     public String getAccountType() {
@@ -91,5 +92,6 @@ public class BankAccount {
         if (this.accountType == "current") {
             this.balance *= 1.01f;
         }
+        this.balance = Math.round(this.balance * 100.0f) / 100.0f;
     }
 }
