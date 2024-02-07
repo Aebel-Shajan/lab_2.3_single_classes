@@ -8,14 +8,7 @@ public class BankAccountTest {
     BankAccount bankAccount;
     @BeforeEach
     public void setup() {
-        this.bankAccount = new BankAccount();
-
-        // Assumes setters work ;-; oops
-        bankAccount.setFirstName("Aebel");
-        bankAccount.setLastName("Shajan");
-        bankAccount.setAccountNumber(123456);
-        bankAccount.setDateOfBirth("05/07/2001");
-        bankAccount.setBalance(100.00f);
+        this.bankAccount = new BankAccount("Aebel", "Shajan", "05/07/2001", 123456);
     }
 
     // First Name
@@ -110,7 +103,7 @@ public class BankAccountTest {
     @Test
     public void canGetBalance() {
         // ARRANGE
-        float expected = 100.00f;
+        float expected = 0.0f;
         // ACT
         float actual = bankAccount.getBalance();
         // ASSERT
@@ -163,5 +156,6 @@ public class BankAccountTest {
         // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
+
 
 }

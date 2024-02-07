@@ -3,9 +3,13 @@ public class BankAccount {
     private String lastName;
     private String dateOfBirth;
     private Integer accountNumber;
-    private float balance;
+    private float balance; // automatically if zero
 
-    public BankAccount() {
+    public BankAccount(String firstName, String lastName, String dateOfBirth, Integer accountNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.accountNumber = accountNumber;
     }
 
     public String getFirstName() {
