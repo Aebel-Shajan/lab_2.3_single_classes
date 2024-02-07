@@ -5,6 +5,9 @@ public class BankAccount {
     int accountNumber;
     float balance;
 
+    public BankAccount() {
+    }
+
     public String getFirstName() {
         return firstName;
     }
