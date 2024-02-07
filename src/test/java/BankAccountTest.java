@@ -54,10 +54,32 @@ public class BankAccountTest {
     @Test
     public void canSetLastName() {
         // ARRANGE
-        String expected = "Mama";
+        String expected = "Biden";
         // ASSERT
-        bankAccount.setLastName("Mama");
+        bankAccount.setLastName("Biden");
         String actual = bankAccount.getLastName();
+        // ACT
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    // Account Number
+    @Test
+    public void canGetAccountNumber() {
+        // ARRANGE
+        int expected = 123456;
+        // ASSERT
+        int actual = bankAccount.getAccountNumber();
+        // ACT
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void canSetAccountNumber() {
+        // ARRANGE
+        int expected = 654321;
+        // ASSERT
+        bankAccount.setAccountNumber(654321);
+        int actual = bankAccount.getAccountNumber();
         // ACT
         assertThat(actual).isEqualTo(expected);
     }
