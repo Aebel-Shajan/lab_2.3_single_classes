@@ -173,9 +173,10 @@ public class BankAccountTest {
     public void canPayInterest() {
         // ARRANGE
         bankAccount.setBalance(100.00f);
-        float expected = 102.00f;
+        bankAccount.setAccountType("savings");
+        float expected = 105.00f; // current account rate is 1.05f
         // ACT
-        bankAccount.payInterest(1.02f);
+        bankAccount.payInterest();
         float actual = bankAccount.getBalance();
         // ASSERT
         assertThat(actual).isEqualTo(expected);

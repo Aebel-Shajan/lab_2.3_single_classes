@@ -4,11 +4,11 @@ public class BankAccount {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
-    private Integer accountNumber;
+    private int accountNumber;
     private float balance; // automatically if zero
     private String accountType;
 
-    public BankAccount(String firstName, String lastName, String dateOfBirth, Integer accountNumber, String accountType) {
+    public BankAccount(String firstName, String lastName, String dateOfBirth, int accountNumber, String accountType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -58,6 +58,18 @@ public class BankAccount {
 
     public void setBalance(float balance) {
         this.balance = balance;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        if (Objects.equals(accountType, "savings") || Objects.equals(accountType, "current")) {
+            this.accountType = accountType;
+        } else {
+            this.accountType = "current";
+        }
     }
 
     public void deposit(float amount) {
