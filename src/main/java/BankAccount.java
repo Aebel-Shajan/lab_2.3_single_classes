@@ -47,4 +47,10 @@ public class BankAccount {
     public void setBalance(float balance) {
         this.balance = balance;
     }
+
+    public void deposit(float amount) {
+        if (amount > 0) {
+            this.balance += amount;
+        }
+    }
 }
