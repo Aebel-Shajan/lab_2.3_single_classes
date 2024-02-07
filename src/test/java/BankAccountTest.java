@@ -106,7 +106,27 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    // Balance
+    @Test
+    public void canGetBalance() {
+        // ARRANGE
+        float expected = 100.00f;
+        // ASSERT
+        float actual = bankAccount.getBalance();
+        // ACT
+        assertThat(actual).isEqualTo(expected);
+    }
 
+    @Test
+    public void canSetBalance() {
+        // ARRANGE
+        float expected = 200.00f;
+        // ASSERT
+        bankAccount.setBalance(200.00f);
+        float actual = bankAccount.getBalance();
+        // ACT
+        assertThat(actual).isEqualTo(expected);
+    }
 
 
 }
