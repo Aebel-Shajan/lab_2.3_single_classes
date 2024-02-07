@@ -168,4 +168,14 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    public void canPayInterest() {
+        // ARRANGE
+        bankAccount.setBalance(100.00f);
+        float expected = 102.00f;
+        // ACT
+        bankAccount.payInterest(1.02f);
+        float actual = bankAccount.getBalance();
+        // ASSERT
+        assertThat(actual).isEqualTo(expected);
+    }
 }
