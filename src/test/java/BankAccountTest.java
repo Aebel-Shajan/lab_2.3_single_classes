@@ -23,9 +23,9 @@ public class BankAccountTest {
     public void canGetFirstName() {
         // ARRANGE
         String expected = "Aebel";
-        // ASSERT
-        String actual = bankAccount.getFirstName();
         // ACT
+        String actual = bankAccount.getFirstName();
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -33,10 +33,10 @@ public class BankAccountTest {
     public void canSetFirstName() {
         // ARRANGE
         String expected = "Joe";
-        // ASSERT
+        // ACT
         bankAccount.setFirstName("Joe");
         String actual = bankAccount.getFirstName();
-        // ACT
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -45,9 +45,9 @@ public class BankAccountTest {
     public void canGetLastName() {
         // ARRANGE
         String expected = "Shajan";
-        // ASSERT
-        String actual = bankAccount.getLastName();
         // ACT
+        String actual = bankAccount.getLastName();
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -55,10 +55,10 @@ public class BankAccountTest {
     public void canSetLastName() {
         // ARRANGE
         String expected = "Biden";
-        // ASSERT
+        // ACT
         bankAccount.setLastName("Biden");
         String actual = bankAccount.getLastName();
-        // ACT
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -67,9 +67,9 @@ public class BankAccountTest {
     public void canGetAccountNumber() {
         // ARRANGE
         int expected = 123456;
-        // ASSERT
-        int actual = bankAccount.getAccountNumber();
         // ACT
+        int actual = bankAccount.getAccountNumber();
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -77,10 +77,10 @@ public class BankAccountTest {
     public void canSetAccountNumber() {
         // ARRANGE
         int expected = 654321;
-        // ASSERT
+        // ACT
         bankAccount.setAccountNumber(654321);
         int actual = bankAccount.getAccountNumber();
-        // ACT
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -89,9 +89,9 @@ public class BankAccountTest {
     public void canGetDateOfBirth() {
         // ARRANGE
         String expected = "05/07/2001";
-        // ASSERT
-        String actual = bankAccount.getDateOfBirth();
         // ACT
+        String actual = bankAccount.getDateOfBirth();
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -99,10 +99,10 @@ public class BankAccountTest {
     public void canSetDateOfBirth() {
         // ARRANGE
         String expected = "01/01/1900";
-        // ASSERT
+        // ACT
         bankAccount.setDateOfBirth("01/01/1900");
         String actual = bankAccount.getDateOfBirth();
-        // ACT
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -111,9 +111,9 @@ public class BankAccountTest {
     public void canGetBalance() {
         // ARRANGE
         float expected = 100.00f;
-        // ASSERT
-        float actual = bankAccount.getBalance();
         // ACT
+        float actual = bankAccount.getBalance();
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -121,12 +121,23 @@ public class BankAccountTest {
     public void canSetBalance() {
         // ARRANGE
         float expected = 200.00f;
-        // ASSERT
+        // ACT
         bankAccount.setBalance(200.00f);
         float actual = bankAccount.getBalance();
-        // ACT
+        // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    public void canDeposit() {
+        // ARRANGE
+        bankAccount.setBalance(100.00f);
+        float expected = 500.00f;
+        // ACT
+        bankAccount.deposit(400.00f);
+        float actual = bankAccount.getBalance();
+        // ASSERT
+        assertThat(actual).isEqualTo(expected);
+    }
 
 }
