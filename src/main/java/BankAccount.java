@@ -1,6 +1,6 @@
 public class BankAccount {
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
     String dateOfBirth;
     int accountNumber;
     float balance;
