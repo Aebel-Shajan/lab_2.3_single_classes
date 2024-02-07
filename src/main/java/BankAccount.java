@@ -1,9 +1,9 @@
 public class BankAccount {
     private String firstName;
     private String lastName;
-    String dateOfBirth;
-    int accountNumber;
-    float balance;
+    private String dateOfBirth;
+    private Integer accountNumber;
+    private float balance;
 
     public BankAccount() {
     }
