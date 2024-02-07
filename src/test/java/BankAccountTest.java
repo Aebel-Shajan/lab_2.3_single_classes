@@ -8,7 +8,7 @@ public class BankAccountTest {
     BankAccount bankAccount;
     @BeforeEach
     public void setup() {
-        this.bankAccount = new BankAccount("Aebel", "Shajan", "05/07/2001", 123456);
+        this.bankAccount = new BankAccount("Aebel", "Shajan", "05/07/2001", 123456, "current");
     }
 
     // First Name
