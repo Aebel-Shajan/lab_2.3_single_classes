@@ -140,16 +140,28 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-
     @Test
     public void canDepositOnlyPositiveNumbers() {
         // ARRANGE
         bankAccount.setBalance(100.00f);
-        float expected = 100.0f;
+        float expected = 100.00f;
         // ACT
-        bankAccount.deposit(-100.0f);
+        bankAccount.deposit(-100.00f);
         float actual = bankAccount.getBalance();
         // ASSERT
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    public void canWithdraw() {
+        // ARRANGE
+        bankAccount.setBalance(100.00f);
+        float expected = 50.00f;
+        // ACT
+        bankAccount.withdraw(50.00f);
+        float actual = bankAccount.getBalance();
+        // ASSERT
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
